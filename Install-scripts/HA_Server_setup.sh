@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# to run first chmod a+x AH_Server_setup.sh
+
 echo "updating and upgrading the system"
     #Update and upgrade the system
 sudo apt-get update -qq
