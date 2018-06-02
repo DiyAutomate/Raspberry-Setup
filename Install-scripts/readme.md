@@ -1,2 +1,2 @@
-ALT-H1 HA_Server_setup.sh
+HA_Server_setup.sh
 =======
