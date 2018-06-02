@@ -26,7 +26,7 @@ apt-get install git
 
 echo "installing home assistant"
   #install home assistant
-pip3 install homeassistant
+sudo pip3 install homeassistant
 
 echo "setting up home assistant aliases"
   #setup home assistant service aliases (to make life easier)
