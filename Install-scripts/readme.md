@@ -23,7 +23,7 @@ sudo bash HA_Server_setup.sh
 
 After this script is complete the following will be true:
 1. apt-get repos will be updated and the system will be upgraded
-2. rmate will be installed
+2. rmate will be installed ( https://github.com/aurora/rmate )
 3. the following alias will be added to your .bashrc file
   * code = 'rmate -p 52698'
 4. git will be installed
