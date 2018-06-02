@@ -25,10 +25,10 @@ After this script is complete the following will be true:
 1. apt-get repos will be updated and the system will be upgraded
 2. rmate will be installed
 3. the following alias will be added to your .bashrc file
-..* code = 'rmate -p 52698'
+  * code = 'rmate -p 52698'
 4. git will be installed
 5. HomeAssistant will be installed
 6. the following aliases will be added to your .bashrc file for HomeAssistant
-..*hrestart ='sudo systemctl restart hass'
-..*hstop ='sudo systemctl stop hass'
-..*hstart='sudo systemctl start hass'
+  *hrestart ='sudo systemctl restart hass'
+  *hstop ='sudo systemctl stop hass'
+  *hstart='sudo systemctl start hass'
