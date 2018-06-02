@@ -13,7 +13,7 @@ sudo apt-get upgrade -y
 
 echo "installing rmate"
    #install rmate
-wget -O /usr/local/bin/rmate https:raw.github.com/aurora/rmate/master/rmate
+sudo wget -O /usr/local/bin/rmate https://raw.github.com/aurora/rmate/master/rmate
 chmod a+x /usr/local/bin/rmate
 
 echo "adding rmate alias to .bashrc"
