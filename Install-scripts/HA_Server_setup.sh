@@ -4,8 +4,8 @@
 
 echo "updating and upgrading the system"
     #Update and upgrade the system
-sudo apt-get update -qq
-sudo apt-get upgrade -y -qq
+sudo apt-get update
+sudo apt-get upgrade -y
 
     #Install Python
     #not needed on current build
@@ -13,8 +13,8 @@ sudo apt-get upgrade -y -qq
 
 echo "installing rmate"
    #install rmate
-sudo wget -O /usr/local/bin/rmate https:raw.github.com/aurora/rmate/master/rmate
-sudo chmod a+x /usr/local/bin/rmate
+wget -O /usr/local/bin/rmate https:raw.github.com/aurora/rmate/master/rmate
+chmod a+x /usr/local/bin/rmate
 
 echo "adding rmate alias to .bashrc"
    #start rmate when current user logs on
@@ -22,7 +22,7 @@ echo "alias code='rmate - 52698'" >> .bashrc
 
 echo "installing git" 
   #install git
-sudo apt-get install git -qq
+apt-get install git
 
 echo "installing home assistant"
   #install home assistant
