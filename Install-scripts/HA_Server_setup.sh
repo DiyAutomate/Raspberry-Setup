@@ -18,7 +18,7 @@ chmod a+x /usr/local/bin/rmate
 
 echo "adding rmate alias to .bashrc"
    #start rmate when current user logs on
-echo "alias code='rmate - 52698'" >> .bashrc
+echo "alias code='rmate -p 52698'" >> .bashrc
 
 echo "installing git" 
   #install git
