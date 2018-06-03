@@ -28,10 +28,13 @@ apt-get install git
 
 echo "installing home assistant"
   #install home assistant
-  #may need a sqlalchemy install
+  
+    #may need a sqlalchemy install
+    #some installations do not have a valid version of sqlalchemy reinstalling will not hurt
 sudo pip3 install sqlalchemy
 sudo pip3 install --upgrade homeassistant
 
+    # if service does not auto install uncomment these lines otherwise comment them out.
 sudo touch /etc/systemd/system/home-assistant@hass.service
 
 sudo echo "[Unit]" > /etc/systemd/system/home-assistant@hass.service
@@ -49,11 +52,14 @@ sudo echo "WantedBy=multi-user.target" >> /etc/systemd/system/home-assistant@has
 sudo systemctl --system daemon-reload
 sudo systemctl enable hass.service
 
+    #stop commenting for service installation.
+
 echo "setting up home assistant aliases"
   #setup home assistant service aliases (to make life easier)
 echo "alias hrestart='sudo systemctl restart hass'" >> .bashrc
 echo "alias hstop='sudo systemctl stop hass'" >> .bashrc
 echo "alias hstart='sudo systemctl start hass'" >> .bashrc
+
 
 
 echo "Installations complete"
