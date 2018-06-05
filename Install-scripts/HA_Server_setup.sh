@@ -79,7 +79,7 @@ sudo echo "echo \"\'alias hstart='sudo systemctl start hass\'\" >> .bashrc" >>Sy
 echo "sudo bash SystemUpdate.sh" >> .bashrc
 
 echo "sudo sed -i /\"usermod -l haadmin -d \/home\/haadmin \-m pi\"/d etc/rc.local" >> .bashrc
-echo "sudo sed -i \"mv /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_haadmin-nopasswd\"" >> .bashrc
+echo "sudo sed -i /\"mv \/etc\/sudoers.d\/010_pi-nopasswd \/etc\/sudoers.d\/010_haadmin-nopasswd\"" >> .bashrc
 
 echo "Installations complete"
 echo "no error checking done"
