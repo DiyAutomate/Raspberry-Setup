@@ -34,7 +34,7 @@ echo "echo \"installing rmate\""
 echo "sudo wget -O /usr/local/bin/rmate https://raw.github.com/aurora/rmate/master/rmate" >>SystemUpdate.sh
 echo "sudo chmod a+x /usr/local/bin/rmate" >>SystemUpdate.sh
 
-echo 'adding rmate alias to .bashrc'" >>SystemUpdate.sh
+echo "echo \"adding rmate alias to .bashrc\"" >>SystemUpdate.sh
    #start rmate when current user logs on
 echo "alias code=\'rmate -p 52698\' >> .bashrc" >> SystemUpdate.sh
 
