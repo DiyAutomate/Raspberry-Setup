@@ -72,9 +72,9 @@ sudo echo "sudo systemctl enable hass.service" >>SystemUpdate.sh
 
 sudo echo "echo 'setting up home assistant aliases'" >> SystemUpdate.sh
   #setup home assistant service aliases (to make life easier)
-sudo echo "echo \"\'alias hrestart='sudo systemctl restart hass\'\" >> .bashrc" >>SystemUpdate.sh
-sudo echo "echo \"\'alias hstop='sudo systemctl stop hass\'\" >> .bashrc" >>SystemUpdate.sh
-sudo echo "echo \"\'alias hstart='sudo systemctl start hass\'\" >> .bashrc" >>SystemUpdate.sh
+sudo echo "echo \"alias hrestart=\'sudo systemctl restart hass\'\" >> .bashrc" >>SystemUpdate.sh
+sudo echo "echo \"alias hstop=\'sudo systemctl stop hass\'\" >> .bashrc" >>SystemUpdate.sh
+sudo echo "echo \"alias hstart=\'sudo systemctl start hass\'\" >> .bashrc" >>SystemUpdate.sh
 
 echo "sudo bash SystemUpdate.sh" >> .bashrc
 
