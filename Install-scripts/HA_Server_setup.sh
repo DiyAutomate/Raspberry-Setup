@@ -7,6 +7,7 @@ sudo sed -i /"exit 0"/d /etc/rc.local
     # 1 - change the user name (copies user profile)
 sudo echo "usermod -l haadmin -d /home/haadmin -m pi" >> /etc/rc.local
     # 2 - update sudoers so that sudo works the way we want (does not ask for password)
+sudo echo "sed -i \'s\/pi\/haadmin\/g\' \/etc\/sudoers.d\/010_pi-nopasswd">> /etc/rc.local
 sudo echo "mv /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_haadmin-nopasswd" >> /etc/rc.local
 sudo echo "exit 0" >> /etc/rc.local
 
@@ -65,7 +66,7 @@ sudo echo "sudo echo \" \">> /etc/systemd/system/hass.service" >>SystemUpdate.sh
 sudo echo "sudo echo \"[Install]\" >> /etc/systemd/system/hass.service" >>SystemUpdate.sh
 sudo echo "sudo echo \"WantedBy=multi-user.target\" >> /etc/systemd/system/hass.service" >>SystemUpdate.sh
 
-sudo echo "sudo systemctl --system daemon-reloadsudo echo " >>SystemUpdate.sh
+sudo echo "sudo systemctl --system daemon-reload" >>SystemUpdate.sh
 sudo echo "sudo systemctl enable hass.service" >>SystemUpdate.sh
 
     #stop commenting for service installation.
@@ -79,7 +80,8 @@ sudo echo "echo \"alias hstart=\'sudo systemctl start hass\'\" >> .bashrc" >>Sys
 echo "sudo bash SystemUpdate.sh" >> .bashrc
 
 echo "sudo sed -i /\"usermod -l haadmin -d \/home\/haadmin \-m pi\"/d \/etc/rc.local" >> .bashrc
-echo "sudo sed -i /\"mv \/etc\/sudoers.d\/010_pi-nopasswd \/etc\/sudoers.d\/010_haadmin-nopasswd\"" >> .bashrc
+#echo "sudo sed -i /\"mv \/etc\/sudoers.d\/010_pi-nopasswd \/etc\/sudoers.d\/010_haadmin-nopasswd\"" >> .bashrc
+#echo "sudo sed -i \'s\/pi\/haadmin\/g\' \/etc\/sudoers.d\/010_pi-nopasswd">> /etc/rc.local
 
 echo "Installations complete" >>SystemUpdate.sh
 echo "no error checking done" >>SystemUpdate.sh
