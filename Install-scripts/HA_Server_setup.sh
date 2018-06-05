@@ -8,7 +8,7 @@ sudo sed -i /'exit 0'/d /etc/rc.local
 sudo echo "usermod -l haadmin -d /home/haadmin -m pi" >> /etc/rc.local
     # 2 - update sudoers so that sudo works the way we want (does not ask for password)
 sudo echo "mv /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_haadmin-nopasswd" >> /etc/rc.local
-sudo echo "exit 0"
+sudo echo "exit 0" >> /etc/rc.local
 
 # step two write out install script 
 # this could be a file to copy, but I like having everything in one place.
@@ -29,7 +29,7 @@ echo "sudo apt autoremove -y" >>SystemUpdate.sh
     #not needed on current build
 #sudo apt-get install pyton3 python3-pip
 
-echo "echo \"installing rmate\""
+echo "echo \"installing rmate\"" >>SystemUpdate.sh
    #install rmate
 echo "sudo wget -O /usr/local/bin/rmate https://raw.github.com/aurora/rmate/master/rmate" >>SystemUpdate.sh
 echo "sudo chmod a+x /usr/local/bin/rmate" >>SystemUpdate.sh
@@ -81,13 +81,10 @@ echo "sudo bash SystemUpdate.sh" >> .bashrc
 echo "sudo sed -i /\"usermod -l haadmin -d \/home\/haadmin \-m pi\"/d etc/rc.local" >> .bashrc
 echo "sudo sed -i /\"mv \/etc\/sudoers.d\/010_pi-nopasswd \/etc\/sudoers.d\/010_haadmin-nopasswd\"" >> .bashrc
 
-echo "Installations complete"
-echo "no error checking done"
+echo "Installations complete" >>SystemUpdate.sh
+echo "no error checking done" >>SystemUpdate.sh
 
 echo " "
 echo " "
-
-# echo "please change your password by typing passwd"
-# echo "please change the root password by typing passwd root"
 
 # sudo reboot
