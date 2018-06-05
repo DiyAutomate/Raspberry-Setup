@@ -2,7 +2,7 @@
 
 #step one update /etc/rc.local to change the user name
     #delete the exit code so we can move it to the end.
-sudo sed -i /'exit 0'/d /etc/rc.local
+sudo sed -i /"exit 0"/d /etc/rc.local
     #write out needed lines
     # 1 - change the user name (copies user profile)
 sudo echo "usermod -l haadmin -d /home/haadmin -m pi" >> /etc/rc.local
