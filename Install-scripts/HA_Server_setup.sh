@@ -42,7 +42,7 @@ echo "echo \"installing git\"" >>SystemUpdate.sh
   #install git
 echo "apt-get install git" >>SystemUpdate.sh
 
-echo "installing home assistant'" >>SystemUpdate.sh
+echo "installing home assistant" >>SystemUpdate.sh
   #install home assistant
   
     #may need a sqlalchemy install
