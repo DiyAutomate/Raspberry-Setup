@@ -36,7 +36,7 @@ echo "sudo chmod a+x /usr/local/bin/rmate" >>SystemUpdate.sh
 
 echo "echo \"adding rmate alias to .bashrc\"" >>SystemUpdate.sh
    #start rmate when current user logs on
-echo "alias code=\'rmate -p 52698\' >> .bashrc" >> SystemUpdate.sh
+echo "alias code=\"rmate -p 52698\" >> .bashrc" >> SystemUpdate.sh
 
 echo "echo \"installing git\"" >>SystemUpdate.sh 
   #install git
@@ -78,7 +78,7 @@ sudo echo "echo \"alias hstart=\'sudo systemctl start hass\'\" >> .bashrc" >>Sys
 
 echo "sudo bash SystemUpdate.sh" >> .bashrc
 
-echo "sudo sed -i /\"usermod -l haadmin -d \/home\/haadmin \-m pi\"/d etc/rc.local" >> .bashrc
+echo "sudo sed -i /\"usermod -l haadmin -d \/home\/haadmin \-m pi\"/d \/etc/rc.local" >> .bashrc
 echo "sudo sed -i /\"mv \/etc\/sudoers.d\/010_pi-nopasswd \/etc\/sudoers.d\/010_haadmin-nopasswd\"" >> .bashrc
 
 echo "Installations complete" >>SystemUpdate.sh
