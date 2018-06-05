@@ -78,7 +78,8 @@ sudo echo "echo \"\'alias hstart='sudo systemctl start hass\'\" >> .bashrc" >>Sy
 
 echo "sudo bash SystemUpdate.sh" >> .bashrc
 
-echo "sudo sed -i /\"usermod -l haadmin -d \/home\/haadmin \-m pi\"/d etc/rc.local"
+echo "sudo sed -i /\"usermod -l haadmin -d \/home\/haadmin \-m pi\"/d etc/rc.local" >> .bashrc
+echo "sudo sed -i \"mv /etc/sudoers.d/010_pi-nopasswd /etc/sudoers.d/010_haadmin-nopasswd\"" >> .bashrc
 
 echo "Installations complete"
 echo "no error checking done"
@@ -86,7 +87,7 @@ echo "no error checking done"
 echo " "
 echo " "
 
-echo "please change your password by typing passwd"
-echo "please change the root password by typing passwd root"
+# echo "please change your password by typing passwd"
+# echo "please change the root password by typing passwd root"
 
-#sudo reboot
+# sudo reboot
